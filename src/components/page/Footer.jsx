@@ -39,7 +39,7 @@ function Footer() {
         <FaLinkedinIn />
     ]
   return (
-    <div className='container  mx-auto  '>
+    <div className='container  mx-auto  my-4'>
         <div className=' px-2 bg-bg_footer py-[27px]'>
                 <div className='flex'>
                 <img src={Logo} alt="" className='mr-[87px]' />
@@ -52,7 +52,7 @@ function Footer() {
                 </ul>
             </div>
         </div>
-            <div className="footer_faq flex list-none px-2">
+            <div className="footer_faq flex list-none mt-[33px] px-2">
                 <div className='mr-[166px]'>
                     <h2>My Account</h2>
                     {MyAccount.map((el, index)=>(
