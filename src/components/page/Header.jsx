@@ -23,17 +23,17 @@ function Header() {
   //   }
   return (
     <div className='flex justify-between px-2 pb-[17px] items-center my-2 container  mx-auto border-b-[0.3px] border-b-solid border-b-green_soc'>
-        <img src={Logo} alt="logo" />
-        <ul className=' xl:block sm:hidden md:hidden flex flex-wrap justify-around items-center gap-4 cursor-pointer  '>
+        <img src={Logo} alt="logo" className='ml:w-20'/>
+        <ul className=' xl:block sm:hidden md:hidden lg:block ml:hidden flex flex-wrap justify-around items-center gap-4 cursor-pointer  '>
             <NavLink className='mx-3' >Home</NavLink>
             <NavLink className='mx-3' >Shop</NavLink>
             <NavLink className='mx-3' >Plant Care</NavLink>
             <NavLink className='mx-3' >Blogs</NavLink>
         </ul>
-          <button  className='lg:hidden sm:block cursor-pointer bg-green rounded-lg p-3 ' ><IoFilter className='text-white'/></button>
+          <button  className='lg:hidden sm:block cursor-pointer bg-green rounded-lg p-3 ml:w-8 ml:h-8 ml:p-2' ><IoFilter className='text-white'/></button>
         <div className="shop flex items-center gap-[30px]">
-        <CiSearch className='text-xl  cursor-pointer sm:hidden'/>
-        <CiShoppingCart  className='text-xl cursor-pointer sm:hidden'/>
+        <CiSearch className='text-xl  cursor-pointer sm:hidden ml:hidden'/>
+        <CiShoppingCart  className='text-xl cursor-pointer sm:hidden ml:hidden'/>
           <Button title={'Login'}/>
           {/* <button className='p-2 bg-green' onClick={PlusNumber}>+</button>
           <p id='num'>{count}</p>

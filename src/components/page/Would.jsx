@@ -15,7 +15,7 @@ function Would() {
     //   fetchWould()
     // }, [])
     return (
-    <div className='would flex items-center justify-around container  mx-auto bg-categoriyes my-6'>
+    <div className='would flex flex-wrap items-center justify-around container  mx-auto bg-categoriyes my-6'>
         {data.map( (item, id) => (
             <div className='w-[247px]' key={id}>
                 <img src={item.image} alt="img" />

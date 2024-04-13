@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
     <Header/>
     <Welcome/>
-    <div className='container  mx-auto flex my-5 gap-[200px]'>
+    <div className='container  mx-auto  my-5 gap-[200px] xl:flex '>
     <Categoriyes/>
     <Card />
     </div>

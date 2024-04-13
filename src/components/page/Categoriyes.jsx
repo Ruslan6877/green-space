@@ -4,10 +4,10 @@ import Sale from '/src/assets/Super Sale Banner.svg'
 
 function Categoriyes() {
   return (
-    <div className='categoriyes container  mx-auto w-[310px] mt-5 bg-categoriyes p-2 ml-4'>
+    <div className='categoriyes container  mx-auto w-[310px] mt-5 h-[900px] bg-categoriyes p-2 ml-4 '>
         <ul>
-            <h2>Categories</h2>
-            <div>
+            <h2 className='xl:block ml:hidden'>Categories</h2>
+            <div className='xl:block ml:hidden'>
             <li>House Plants</li>
             <li>Potter Plants</li>
             <li>Seeds</li>
@@ -29,7 +29,7 @@ function Categoriyes() {
 
 
 
-            <div>
+            <div className='xl:block ml:hidden'>
                 <h2>Size</h2>
             <li>Small</li>
             <li>Medium</li>

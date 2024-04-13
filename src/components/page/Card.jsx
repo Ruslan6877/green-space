@@ -6,6 +6,7 @@ import { data } from "autoprefixer"
 import { useEffect, useState } from "react"
 
 
+
 function Card() {
     const [data, setData] = useState([])
 
@@ -17,6 +18,7 @@ function Card() {
         }
         fetchData()
       } , [])
+
   return (
     <div className=" justify-end container  mx-auto  ">
       <header>
@@ -32,7 +34,7 @@ function Card() {
           </ul>
         </nav>
       </header>
-        <div className="flex flex-wrap w-[840px]">
+        <div className="flex flex-wrap xl:m-0 sm:ml-24">
         {data.map( (item, index) =>(
           <div key={index} className="w-[258px] ml-[20px]">
             <img className="w-[158px] h-[200px]" src={item.image} alt="fd" />
