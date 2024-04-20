@@ -52,7 +52,7 @@ function Footer() {
                 </ul>
             </div>
         </div>
-            <div className="footer_faq flex flex-wrap xl:ml-0 sm:ml-24 list-none mt-[33px] px-2 ml:hidden">
+            <div className="footer_faq xl:block xl:flex flex flex-wrap xl:ml-0 sm:ml-24 list-none mt-[33px] px-2 ml:hidden ">
                 <div className='mr-[166px]'>
                     <h2>My Account</h2>
                     {MyAccount.map((el, index)=>(

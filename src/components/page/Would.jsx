@@ -5,19 +5,11 @@ import data from '/src/data/would.json'
 
 function Would() {
   console.log(data[0].would, "data");
-    // const [would, setWould] = useState([])
-    // useEffect(() => {
-    //   const  fetchWould = async() =>{
-    //     fetch({data})
-    //     .then((would) => would.json())
-    //     .then((json) => setWould(json))
-    //   }
-    //   fetchWould()
-    // }, [])
+    
     return (
     <div className='would flex flex-wrap items-center justify-around container  mx-auto bg-categoriyes my-6'>
-        {data.map( (item, id) => (
-            <div className='w-[247px] ml:hidden' key={id}>
+        {data.map( (item, index) => (
+            <div className='w-[247px] ml:hidden xl:block' key={index}>
                 <img src={item.image} alt="img" />
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>

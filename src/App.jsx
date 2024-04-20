@@ -1,30 +1,32 @@
-import React from 'react'
-import { BrowserRouter, Link } from 'react-router-dom';
-import Header from './components/page/Header';
-import Footer from './components/page/Footer';
-import Card from './components/page/Card';
-import Would from './components/page/Would';
-import Welcome from './components/page/Welcome';
+import { BrowserRouter, Link, Routes , Route} from 'react-router-dom';
+import Home from './components/page/Home';
+import Shop from './components/Shop'
+import Login from './components/Login';
+import { useEffect, useState } from 'react';
 
-import Categoriyes from './components/page/Categoriyes';
-import Blogs from './components/page/Blogs';
-import Find from './components/page/Find';
+
 
 
 function App() {
+  const [data, setData] = useState([])
+
+  useEffect(()=>{
+    const fetchData = async() =>{
+      fetch("https://fakestoreapi.com/products")
+      .then((data) => data.json())
+      .then((json) => setData(json))
+    }
+    fetchData()
+  } , [])
   return (
     <>
     <BrowserRouter>
-    <Header/>
-    <Welcome/>
-    <div className='container  mx-auto  my-5 gap-[200px] xl:flex '>
-    <Categoriyes/>
-    <Card />
-    </div>
-    <Find/>
-    <Blogs/>
-    <Would/>
-    <Footer/>
+    <Routes>
+      <Route path='/'  element={<Home data = {data}/>}></Route>
+      <Route path='/shop' element={<Shop data = {data}/>}></Route>
+      <Route path='/login' element={<Login />}></Route>
+    </Routes>
+    
     </BrowserRouter>
 
     </>
